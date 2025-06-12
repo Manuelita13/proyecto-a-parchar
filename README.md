@@ -1,10 +1,14 @@
 # Cosas a Instalar:
 
-    Flask:
+  Flask:
       pip install flask
 
     - Formularios:
         pip install flask-wtf 
+
+    - Formularios:
+        pip install email_validator 
+
 
 # Ejecutar el proyecto:
 

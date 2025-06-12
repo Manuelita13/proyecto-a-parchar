@@ -9,218 +9,445 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+Zl5pD5y5z5+5p5z5z5z5z5z" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="../static/css/lugaresTuristicos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/lugaresTuristicos.css') }}">
 
 </head>
 
 <body>
-    <!--Header-->
-    <header>
-        <!--Logo-->
-        <img src="" alt="">
-        <!--Menu desplegale-->
-        <ul class="nav justify-content-center">
-            <li class="nav-item-active p-4"><a class="text-dark font-weight-bold" href="index.html">Inicio</a></li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="Restaurantes.html">Restaurantes</a>
-            </li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="Museos.html">Museos</a></li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="lugaresTuristicos.html">Lugares
-                    turísticos</a></li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="guiaCallejera.html">Guía callejera</a>
-            </li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="#">Iniciar Sesión</a></li>
-        </ul>
 
-        <!--Banner inicial-->
-        <div class="banner w-full">
-            <video src="source/videos/videoMedellin.mp4" autoplay loop muted playsinline></video>
-            <div class="banner-text color-white">
-                <h1 class="pb-3">¡Vamonos pa' Medellín!: Descubre el encanto de esta mágica ciudad</h1>
-                <h2>La ciudad de la eterna primavera</h2>
-            </div>
-        </div>
-    </header>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Graffitour-1.jpg" alt="Imagen del Graffitour"
-                        id="imgGraffitour">
-                    <h2>Graffitour</h2>
-                    <p id="descGraffitour">Recorrer el Graffitour en la Comuna 13 de Medellín es sumergirse en un lienzo
-                        vivo que cuenta una historia de resistencia. En este barrio, que enfrentó años de conflicto, el
-                        arte urbano floreció como un símbolo de esperanza. Guías locales comparten el significado detrás
-                        de cada vibrante mural y grafiti, explicando cómo estas expresiones artísticas, junto a la
-                        música y la danza, se convirtieron en herramientas de transformación social y comunitaria. Es
-                        una experiencia conmovedora que visibiliza el poder del arte para sanar heridas, recuperar la
-                        dignidad y cambiar la narrativa de un lugar.</p>
-                </div>
-            </div>
+    {% include 'header.html' %}
 
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Parque-Arvi-1.jpg" alt="Imagen del Parque Arvi"
-                        id="imgParqueArvi">
-                    <h2>Parque Arvi</h2>
-                    <p id="descParqueArvi">El Parque Arví es un extenso tesoro natural y ecológico situado en el
-                        corregimiento de Santa Elena, a las afueras de Medellín. Se accede cómodamente a través de un
-                        fascinante viaje en Metrocable, ofreciendo vistas espectaculares. Este parque es un gran pulmón
-                        verde para la ciudad, dedicado a la conservación y el ecoturismo. Con senderos para caminatas,
-                        áreas de pícnic y una rica biodiversidad, es un destino ideal para conectar con la naturaleza,
-                        disfrutar del aire libre y explorar vestigios arqueológicos, brindando una experiencia de
-                        tranquilidad y aventura.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Piedras-blancas.jpg"
-                        alt="Imagen del Parque Piedras Blancas" id="imgPiedrasBlancas">
-                    <h2>Parque ecológico piedras blancas</h2>
-                    <p id="descPiedrasBlancas">El Parque Ecológico Piedras Blancas, ubicado en el corregimiento de Santa
-                        Elena cerca de Medellín, es un santuario natural que rodea el embalse del mismo nombre. Este
-                        extenso parque ofrece a los visitantes un escape a la naturaleza con senderos ecológicos, áreas
-                        de pícnic, mariposario y un museo entomológico. Es un destino popular para el ecoturismo, el
-                        avistamiento de aves y actividades acuáticas como paseos en bote, brindando un espacio de
-                        tranquilidad y conexión con la rica biodiversidad del oriente antioqueño.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Catedral-metropolitana-1.jpg"
-                        alt="Imagen de la Catedral Metropolitana" id="imgCatedral">
-                    <h2>Catedral metropolitana de Medellin</h2>
-                    <p id="descCatedral">La Catedral Metropolitana de Medellín, oficialmente Basílica Metropolitana de
-                        la Inmaculada Concepción, es un imponente templo católico ubicado al costado norte del Parque de
-                        Bolívar, en el centro de la ciudad. Construida en ladrillo macizo en estilo neorrománico a
-                        principios del siglo XX, destaca por su monumentalidad y detallada arquitectura. Es la sede
-                        principal de la Arquidiócesis de Medellín y un importante referente religioso e histórico. Su
-                        amplio interior y sus vitrales contribuyen a la atmósfera de solemnidad, siendo un hito cultural
-                        y espiritual en el paisaje urbano.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/teatro-metropolitano-medellin.jpg"
-                        alt="Imagen del Teatro Metropolitano" id="imgTeatro">
-                    <h2>Teatro metropolitano de Medellin</h2>
-                    <p id="descTeatro">El Teatro Metropolitano José Gutiérrez Gómez es uno de los centros culturales más
-                        importantes de Medellín, ubicado en la Calle 41 #57-30, cerca de Plaza Mayor. Inaugurado en
-                        1987, es el principal escenario de la ciudad para las artes escénicas. Con capacidad para más de
-                        1600 espectadores, alberga una variada programación que incluye conciertos de la Orquesta
-                        Filarmónica de Medellín, ópera, ballet, teatro y espectáculos nacionales e internacionales,
-                        consolidándose como un referente para la apreciación artística y cultural en el Valle de Aburrá.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Plaza-Mayor-Medellin-3-1536x1024.jpg"
-                        alt="Imagen de Plaza Mayor" id="imgPlazaMayor">
-                    <h2>Plaza Mayor</h2>
-                    <p id="descPlazaMayor">Plaza Mayor Medellín Convenciones y Exposiciones es el principal centro de
-                        eventos de la ciudad, ubicado en el corazón del sector La Alpujarra. Con moderna infraestructura
-                        y versátiles pabellones y salones, es un espacio clave para la realización de ferias,
-                        exposiciones, congresos y convenciones de ámbito local, nacional e internacional. Su diseño
-                        arquitectónico se integra al entorno urbano, siendo un motor importante para la economía y la
-                        proyección de Medellín, acogiendo anualmente una gran variedad de eventos que atraen a miles de
-                        visitantes.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Plaza-libertad-1.jpg" alt="Imagen del Centro Cívico"
-                        id="imgCentroCivico">
-                    <h2>Centro cívico de antioquia Plaza de la Libertad</h2>
-                    <p id="descCentroCivico">El Centro Cívico de Antioquia y la Plaza de la Libertad conforman un
-                        importante complejo administrativo y público en el corazón de Medellín, adyacente al Centro
-                        Administrativo La Alpujarra. Este espacio moderno alberga edificios institucionales clave y una
-                        amplia plaza diseñada para el encuentro ciudadano. Es un símbolo de la gestión departamental y
-                        municipal, sirviendo como escenario para eventos cívicos y culturales. Su arquitectura
-                        contemporánea y el diseño de la plaza buscan integrarse al entorno urbano, creando un punto
-                        neurálgico para la administración y la participación pública en Medellín.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Portada-Jardin-Botanico-2.jpg"
-                        alt="Imagen del Zoológico de Santa Fe" id="imgJardin">
-                    <h2>Jardin Botanico de Medellin</h2>
-                    <p id="descJardin">El Jardín Botánico de Medellín, un oasis verde en el corazón de la ciudad, es
-                        un santuario de biodiversidad. Hogar de más de 4.500 especies de plantas, incluyendo una
-                        impresionante colección de orquídeas en el Orquideorama, es un espacio vibrante para la
-                        educación ambiental y la recreación. Sus senderos serpenteantes invitan a la contemplación,
-                        mientras que el lago y las diversas colecciones botánicas, como el Jardín del Desierto y el
-                        Bosque Tropical, ofrecen una experiencia inmersiva en la riqueza natural de Colombia y el mundo.
-                        Es un pulmón vital para Medellín y un destino imperdible.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
-                <div class="seccion-lugar ">
-                    <img src="/source/img/Lugares turisticos/Graffitour-3.jpg"
-                        alt="Imagen del Estadio Atanasio Girardot" id="imgEstadio">
-                    <h2>Estadio Atanasio Girardot</h2>
-                    <p id="descEstadio">El Estadio Atanasio Girardot, ubicado en el barrio Laureles-Estadio de Medellín,
-                        es el principal recinto deportivo de la ciudad y un ícono del fútbol colombiano. Sede de los
-                        equipos Atlético Nacional e Independiente Medellín, este estadio con capacidad para más de
-                        40,000 espectadores ha sido escenario de importantes partidos nacionales e internacionales.
-                        Forma parte de una unidad deportiva más amplia y, además de fútbol, acoge eventos culturales y
-                        conciertos masivos, consolidándose como un punto neurálgico para el deporte y el entretenimiento
-                        en la capital antioqueña.</p>
-                </div>
-            </div>
+    <!--Banner inicial-->
+    <div class="banner w-full">
+        <video src="{{ url_for('static', filename='source/videos/videoMedellin.mp4') }}" autoplay loop muted playsinline></video>
+        <div class="banner-text color-white">
+            <h1 class="pb-3">¡Vamonos pa' Medellín!: Descubre el encanto de esta mágica ciudad</h1>
+            <h2>La ciudad de la eterna primavera</h2>
         </div>
     </div>
 
-    <!--Footer-->
-    <Footer>
-        <!--Logo-->
-        <img src="" alt="">
-        <h3 class="mb-3">¡No te quedes sin tu parche!</h3>
 
-        <!--Columna izquiera-->
-        <div class="col-6">
-            <!--Lista-->
-            <nav>
+    <body>
+        <!--pop ups-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupMuseoAntioquia">
+                        <img src="{{ url_for('static', filename='source/img/Museos/Museo-de-Antioquia-1.jpg') }}" alt="Museo de Antioquia"
+                            id="imgMuseoAnti">
+                        <h2>Museo de Antioquia</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupCasaMemoria">
+                        <img src="{{ url_for('static', filename='source/img/Museos/museo casa de la memoria.jpg') }}" alt="Museo Casa de la Memoria"
+                            id="imgMuseCaMemo">
+                        <h2>Museo Casa de la Memoria</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupMAMM">
+                        <img src="{{ url_for('static', filename='source/img/Museos/museo de arte moderno medellin.jpg') }}" alt="MAMM" id="imgMAMM">
+                        <h2>MAMM</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupMuseoCastillo">
+                        <img src="{{ url_for('static', filename='source/img/Museos/Museo el castillo.jpg') }}" alt="Imagen del Museo el Castillo"
+                            id="imgMuseoCasti">
+                        <h2>Museo el Castillo</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupCasaGardeliana">
+                        <img src="{{ url_for('static', filename='source/img/Museos/Museo-Gardeliano.jpg') }}" alt="Imagen del museo Gardeliano"
+                            id="imgTeatro">
+                        <h2>Casa Museo Gardeliana</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupMuseoAgua">
+                        <img src="{{ url_for('static', filename='source/img/Museos/museo del agua.jpg') }}" alt="Imagen de Museo del agua" id="imgMusa">
+                        <h2>Museo del Agua</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupCementerioSanPedro">
+                        <img src="{{ url_for('static', filename='source/img/Museos/cementerio-san-pedro-medellin.jpg') }}"
+                            alt="Imagen del Cementario Museo San Pedro" id="imgCemenSanPedro">
+                        <h2>Cementerio Museo de San Pedro</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupPalacioCultura">
+                        <img src="{{ url_for('static', filename='source/img/Museos/Palacio-de-la-cultura.jpg') }}" alt="Imagen del Palacio de la Cultura"
+                            id="imgPalacio">
+                        <h2>Palacio de la Cultura</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
+                    <div class="seccion-lugar activador-popup" data-popup-target="popupMuseoUdeA">
+                        <img src="{{ url_for('static', filename='source/img/Museos/Museo-universidad-antioquia.jpg') }}"
+                            alt="Imagen del Museo de la Universidad" id="imgMuseoA">
+                        <h2>Museo Universitario Universidad de Antioquia</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Contenido Pop ups-->
+        <div id="popupMuseoAntioquia" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/Museo-de-Antioquia-1.jpg') }}" alt="Museo de Antioquia">
+                <h2>Museo de Antioquia</h2>
+                <p>El **Museo de Antioquia** es una joya cultural en el corazón de Medellín, ubicado estratégicamente
+                    frente a la Plaza Botero. Fundado en 1881, es el segundo museo más antiguo de Colombia y alberga una
+                    de las colecciones de arte más importantes del país. Su acervo es especialmente conocido por la
+                    **extensa obra de Fernando Botero**, que incluye pinturas, esculturas y dibujos donados por el
+                    propio maestro, distribuidos tanto en sus salas como en la icónica plaza exterior.
+                    <br><br>
+                    Además de Botero, el museo cuenta con colecciones que trazan la historia del arte colombiano desde
+                    el período colonial hasta las vanguardias del siglo XX y el arte contemporáneo. Sus exhibiciones
+                    permanentes y temporales ofrecen una mirada profunda a la diversidad cultural y artística de la
+                    región y el país, convirtiéndolo en un espacio dinámico para el diálogo, la reflexión y el disfrute
+                    del patrimonio artístico.
+                    <br><br>
+                    Horario de Atención:
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Lunes a sábado: 10:00 a.m. a 5:30 p.m.</li>
+                    <li>Domingos y festivos: 10:00 a.m. a 4:30 p.m.</li>
                 </ul>
-            </nav>
+                Ubicación:
+                <br>Carrera 52 # 52-43, Medellín, Antioquia. (Frente a la Plaza Botero)
+                </p>
+                <button onclick="window.open('https://museodeantioquia.co/', '_blank')">Visitar sitio web
+                    oficial</button>
+            </div>
         </div>
 
-        <!--Columna derecha-->
-        <div class="col-6">
-            <h3 class="mb-3">Contáctanos</h3>
-            <p>Teléfono: 123456789</p>
-            <p>Email</p>
-            <p>Dirección: Calle 123 #45-67, Medellín, Colombia</p>
-            <p>Redes sociales: Facebook, Instagram, Twitter</p>
+        <div id="popupCasaMemoria" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/museo casa de la memoria.jpg') }}" alt="Museo Casa de la Memoria">
+                <h2>Museo Casa de la Memoria</h2>
+                <p>El Museo Casa de la Memoria en Medellín es un espacio conmovedor dedicado a reflexionar sobre el
+                    conflicto armado colombiano y a honrar a sus víctimas. Ubicado cerca de la estación Bicentenario del
+                    Metroplús, no es un museo tradicional de objetos, sino un lugar que acoge testimonios, narrativas y
+                    expresiones artísticas de quienes vivieron la violencia. A través de exposiciones interactivas,
+                    fotografías, videos y sonidos, el museo busca fomentar la comprensión, la memoria colectiva y la no
+                    repetición. Es un sitio crucial para la reconciliación y la construcción de paz, ofreciendo una
+                    perspectiva humana profunda sobre las cicatrices del conflicto y la resiliencia de la sociedad.
+                    <br><br>
+                    Horario de Atención:
+                <ul>
+                    <li>Martes a viernes: 9:00 a.m. a 5:30 p.m.</li>
+                    <li>Sábados, domingos y festivos: 10:00 a.m. a 4:00 p.m.</li>
+                    <li>Lunes: Cerrado.</li>
+                </ul>
+                Ubicación:
+                <br>Calle 51 # 36-66, Barrio Boston, Medellín, Antioquia.
+                </p>
+                <button onclick="window.open('https://www.museocasadelamemoria.gov.co/', '_blank')">Visitar sitio web
+                    oficial</button>
+            </div>
         </div>
-        <p>© 2025 A Parchar Todos los derechos reservados. </p>
-    </Footer>
 
-    // --- Código JavaScript ---
-    <script>
-        document.querySelectorAll('.seccion-lugar img').forEach(function(img) {
-            img.addEventListener('click', function() {
-                const card = img.closest('.seccion-lugar');
-                card.classList.toggle('abierta');
+        <div id="popupMAMM" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/museo de arte moderno medellin.jpg') }}" alt="MAMM">
+                <h2>MAMM (Museo de Arte Moderno de Medellín)</h2>
+                <p>El Museo de Arte Moderno de Medellín (MAMM) es un epicentro cultural y arquitectónico ubicado en el
+                    vibrante barrio de Ciudad del Río. Más que un espacio de exposición, es un punto de encuentro
+                    dinámico que ha revitalizado la zona con su diseño moderno. El MAMM se enfoca en la difusión y
+                    conservación del arte moderno y contemporáneo, prestando especial atención a las prácticas
+                    artísticas locales, nacionales e internacionales desde la década de 1950 hasta la actualidad. Sus
+                    amplias salas albergan exposiciones rotativas, una notable colección permanente y actividades
+                    culturales diversas, convirtiéndolo en un lugar clave para la apreciación del arte y la interacción
+                    ciudadana en Medellín.
+                    <br><br>
+                    Horario de Atención:
+                <ul>
+                    <li>Martes a vierne 11:00 a.m. a 6:00 p.m.</li>
+                    <li>Sábados, domingos y festivos: 11:00 a.m. a 7:00 p.m.</li>
+                    <li>Lunes: Cerrado.</li>
+                </ul>
+                Ubicación:
+                <br>Carrera 44 # 19A-100, Ciudad del Río, Medellín, Antioquia.
+                </p>
+                <button onclick="window.open('https://www.mamm.org.co/', '_blank')">Visitar sitio web oficial</button>
+            </div>
+        </div>
+
+        <div id="popupMuseoCastillo" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/Museo el castillo.jpg') }}" alt="Museo el Castillo">
+                <h2>Museo El Castillo</h2>
+                <p>El Museo El Castillo en Medellín es un majestuoso palacio gótico medieval que transporta a sus
+                    visitantes a otra época. Construido inicialmente como una casa campestre para la familia Echavarría,
+                    hoy es un fascinante museo que exhibe una vasta colección de artes decorativas europeas, incluyendo
+                    mobiliario de época, cristalería, porcelanas, tapices y esculturas. Sus hermosos jardines franceses
+                    y de estilo japonés son un oasis de tranquilidad y belleza, perfectos para un paseo. Más allá de su
+                    valor histórico y artístico, El Castillo también es un centro cultural activo, ofreciendo
+                    conciertos, talleres y eventos que lo convierten en un destino encantador para explorar la elegancia
+                    del pasado.
+                    <br><br>
+                    Horario de Atención:
+                <ul>
+                    <li>Lunes a viernes: 10:00 a.m. a 6:00 p.m.</li>
+                    <li>Sábados, domingos y festivos: 10:00 a.m. a 5:00 p.m.</li>
+                </ul>
+                Ubicación:
+                <br>Calle 9 Sur # 32-260, El Poblado, Medellín, Antioquia.
+                </p>
+                <button onclick="window.open('https://museoelcastillo.org/', '_blank')">Visitar sitio web
+                    oficial</button>
+            </div>
+        </div>
+
+        <div id="popupCasaGardeliana" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/Museo-Gardeliano.jpg') }}" alt="Casa Museo Gardeliana">
+                <h2>Casa Museo Gardeliana</h2>
+                <p>El Museo Casa Gardeliana en Medellín es un emotivo homenaje al legendario Carlos Gardel, figura
+                    icónica del tango, cuya memoria perdura fuertemente en el barrio de Manrique. Este modesto pero
+                    significativo museo, ubicado en una casa que evoca la época dorada del tango, conmemora el trágico
+                    accidente aéreo que le quitó la vida en el aeropuerto de Medellín en 1935. Albergando una colección
+                    de objetos personales, fotografías, discos y recuerdos, el museo es un punto de encuentro para
+                    aficionados al tango y gardelianos. Es un lugar donde se respira la pasión por su música y se honra
+                    su legado en la ciudad que se convirtió en su última morada.
+                    <br><br>
+                    Horario de Atención:
+                <ul>
+                    <li>Martes a sábado: 9:00 a.m. a 5:00 p.m.</li>
+                    <li>Domingos y festivos: 10:00 a.m. a 3:00 p.m.</li>
+                    <li>Lunes: Cerrado.</li>
+                </ul>
+                Ubicación:
+                <br>Carrera 45 # 76-50, Barrio Manrique, Medellín, Antioquia.
+                </p>
+                <button
+                    onclick="window.open('https://museosdemedellin.gov.co/museos/casa-museo-gardeliana/', '_blank')">Más
+                    información (Sitio Museos de Medellín)</button>
+            </div>
+        </div>
+
+        <div id="popupMuseoAgua" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/museo del agua.jpg') }}" alt="Museo del Agua">
+                <h2>Museo del Agua</h2>
+                <p>El Museo del Agua EPM en Medellín es un espacio educativo y fascinante dedicado a la vital
+                    importancia del agua. Ubicado en el corazón de la ciudad, este museo interactivo invita a los
+                    visitantes a explorar el ciclo del agua, desde su origen natural hasta su uso en los hogares y la
+                    industria. A través de exposiciones lúdicas y didácticas, se abordan temas cruciales como la
+                    conservación, la gestión sostenible de los recursos hídricos y el impacto del cambio climático. Es
+                    un lugar que busca crear conciencia sobre la responsabilidad de cada ciudadano en el cuidado de este
+                    recurso indispensable para la vida y el futuro.
+                    <br><br>
+                    Horario de Atención:
+                <ul>
+                    <li>Martes a viernes: 8:30 a.m. a 5:00 p.m.</li>
+                    <li>Sábados, domingos y festivos: 10:00 a.m. a 5:00 p.m.</li>
+                    <li>Lunes: Cerrado.</li>
+                </ul>
+                Ubicación:
+                <br>Carrera 57 # 44-9, Centro, Medellín, Antioquia.
+                </p>
+                <button
+                    onclick="window.open('https://www.epm.com.co/site/clientes/nuestros-servicios/museo-del-agua', '_blank')">Visitar
+                    sitio web oficial</button>
+            </div>
+        </div>
+
+        <div id="popupCementerioSanPedro" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/cementerio-san-pedro-medellin.jpg') }}" alt="Cementerio Museo de San Pedro">
+                <h2>Cementerio Museo de San Pedro</h2>
+                <p>El Museo Cementerio San Pedro no es solo un camposanto, sino un verdadero museo a cielo abierto y un
+                    Patrimonio Cultural de la Nación, ubicado en Medellín. Inaugurado en 1842, alberga mausoleos y
+                    esculturas de gran valor artístico y arquitectónico, muchas de ellas obras de destacados artistas.
+                    Aquí reposan figuras prominentes de la historia, la política, la cultura y el arte colombiano, como
+                    el premio Nobel Gabriel García Márquez (sus cenizas están en Cartagena, pero su familia está aquí) y
+                    el expresidente Carlos E. Restrepo. El museo ofrece recorridos guiados, conciertos y eventos
+                    culturales, permitiendo a los visitantes explorar la historia y el arte en un entorno de paz y
+                    contemplación.
+                    <br><br>
+                    Horario de Atención:
+                <ul>
+                    <li>Museo: Martes a domingo: 9:00 a.m. a 5:00 p.m.</li>
+                    <li>Cementerio: Lunes a domingo: 8:00 a.m. a 6:00 p.m.</li>
+                </ul>
+                Ubicación:
+                <br>Carrera 51 # 68-68, Sector Boston, Medellín, Antioquia.
+                </p>
+                <button onclick="window.open('https://www.museocementeriosanpedro.org.co/', '_blank')">Visitar sitio web
+                    oficial</button>
+            </div>
+        </div>
+
+        <div id="popupPalacioCultura" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/Palacio-de-la-cultura.jpg') }}" alt="Palacio de la Cultura">
+                <h2>Palacio de la Cultura Rafael Uribe Uribe</h2>
+                <p>El Palacio de la Cultura Rafael Uribe Uribe, una joya arquitectónica de estilo gótico flamenco, se
+                    erige majestuosamente en el centro de Medellín, cerca del Parque Berrío. Diseñado por el arquitecto
+                    belga Agustín Goovaerts y construido a principios del siglo XX, este edificio es un ícono histórico
+                    y cultural de la ciudad. Originalmente sede de la Gobernación de Antioquia, hoy es un vibrante
+                    centro cultural que alberga el Instituto de Cultura y Patrimonio de Antioquia, la Orquesta
+                    Filarmónica de Medellín, el Centro de Documentación Musical y el Archivo Histórico. Sus
+                    impresionantes fachadas, balcones y vitrales invitan a explorar su riqueza arquitectónica y la
+                    intensa vida cultural que allí se desarrolla.
+                    <br><br>
+                    Horario de Atención:
+                <ul>
+                    <li>Lunes a viernes: 8:00 a.m. a 5:00 p.m. (Algunas salas pueden tener horarios especiales)</li>
+                    <li>Sábados y festivos: 10:00 a.m. a 2:00 p.m.</li>
+                    <li>Domingos:** Cerrado.</li>
+                </ul>
+                Ubicación:
+                <br>Carrera 51 # 52-03, Centro, Medellín, Antioquia.
+                </p>
+                <button
+                    onclick="window.open('https://www.culturaantioquia.gov.co/palacio-de-la-cultura-rafael-uribe-uribe', '_blank')">Visitar
+                    sitio web oficial</button>
+            </div>
+        </div>
+
+        <div id="popupMuseoUdeA" class="popup-overlay">
+            <div class="popup-contenido">
+                <span class="cerrar-popup">&times;</span>
+                <img src="{{ url_for('static', filename='source/img/Museos/Museo-universidad-antioquia.jpg') }}"
+                    alt="Museo Universitario Universidad de Antioquia">
+                <h2>Museo Universitario Universidad de Antioquia (MUUA)</h2>
+                <p>El Museo Universitario de la Universidad de Antioquia (MUUA) es un vasto repositorio de conocimiento
+                    y cultura ubicado en el campus principal de la UdeA en Medellín. Fundado en 1876, es uno de los
+                    museos más antiguos y completos de Colombia. Sus diversas colecciones abarcan desde piezas
+                    arqueológicas y etnográficas que narran la historia precolombina y las culturas indígenas de la
+                    región, hasta colecciones de ciencias naturales (geología, zoología, botánica) y un significativo
+                    acervo de arte moderno y contemporáneo. El MUUA es un espacio vibrante para la investigación, la
+                    educación y la divulgación, ofreciendo una perspectiva integral del patrimonio cultural y natural de
+                    Antioquia y el país.
+                    <br><br>
+            Horario de Atención
+                <ul>
+                    <li>Martes a viernes: 9:00 a.m. a 5:00 p.m.</li>
+                    <li>Sábados: 10:00 a.m. a 4:00 p.m.</li>
+                    <li>Domingos y lunes: Cerrado.</li>
+                </ul>
+                Ubicación:
+                <br>Calle 67 # 53-108, Medellín, Antioquia.
+                <br>
+                Teléfono: (604) 219 5180
+                </p>
+                <button
+                    onclick="window.open('https://www.udea.edu.co/wps/portal/udea/web/inicio/a-z/museo-universitario', '_blank')">Visitar
+                    sitio web oficial</button>
+            </div>
+        </div>
+
+        <script>
+        // Script para manejar los pop-ups
+        document.addEventListener('DOMContentLoaded', function () {
+        const activadoresPopup = document.querySelectorAll('.activador-popup');
+
+        activadoresPopup.forEach(activador => {
+            activador.addEventListener('click', function () {
+                const targetPopupId = this.dataset.popupTarget;
+                const popupOverlay = document.getElementById(targetPopupId);
+
+                if (popupOverlay) {
+                    popupOverlay.style.display = 'flex';
+                    setTimeout(() => {
+                        popupOverlay.classList.add('activo');
+                    }, 10);
+                }
             });
         });
-        
-    </script>
-    
+
+        const botonesCerrar = document.querySelectorAll('.cerrar-popup');
+
+        botonesCerrar.forEach(boton => {
+            boton.addEventListener('click', function () {
+                const popupOverlay = this.closest('.popup-overlay');
+                if (popupOverlay) {
+                    popupOverlay.classList.remove('activo');
+                    setTimeout(() => {
+                        popupOverlay.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+
+        document.querySelectorAll('.popup-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    overlay.classList.remove('activo');
+                    setTimeout(() => {
+                        overlay.style.display = 'none';
+                    }, 300);
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <footer class="bg-light py-4">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-12">
+                <img src="{{ url_for('static', filename='source/img/a parchar_page-0001.jpg') }}" alt="Logo de A Parchar" class="img-fluid mb-2" style="max-height: 50px;">
+                <h3 class="h5 mb-0">¡No te quedes sin tu parche!</h3>
+            </div>
+
+            <div class="col-12">
+                <nav>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none text-dark">Inicio</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Museos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Parques</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Eventos</a></li>
+                        <li><a href="#" class="text-decoration-none text-dark">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="col-12">
+                <h3 class="h5 mb-2">Contáctanos</h3>
+                <p class="mb-1">Teléfono: 123456789</p>
+                <p class="mb-1">Email: info@aparchar.com</p>
+                <p class="mb-1">Dirección: Calle 123 #45-67, Medellín, Colombia</p>
+                <p class="mb-0">Redes sociales:
+                    <a href="#" class="text-decoration-none text-dark">Facebook</a>,
+                    <a href="#" class="text-decoration-none text-dark">Instagram</a>,
+                    <a href="#" class="text-decoration-none text-dark">Twitter</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 text-center text-muted">
+                <p class="mb-0">© 2025 A Parchar Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+    </body>
+
+</html>
 </body>
 
 </html>

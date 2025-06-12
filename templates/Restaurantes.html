@@ -5,31 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+Zl5pD5y5z5+5p5z5z5z5z5z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/restaurantes.css">
-    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/restaurantes.css') }}">
+
     <title>Restaurantes</title>
 
 </head>
 <body>
-    <header>
-        <!--Logo-->
-        <img src="" alt="">
-        <!--Menu desplegale-->
-            <ul class="nav justify-content-center font-weight-bold">
-                <li class="nav-item-active p-4">
-                    <a class="text-dark font-weight-bold" href="index.html">Inicio</a></li>
-                <li class="nav-item p-4">
-                    <a class="text-dark font-weight-bold" href="Restaurantes.html">Restaurantes</a></li>
-                <li class="nav-item p-4">
-                    <a class="text-dark font-weight-bold" href="Museos.html">Museos</a></li>
-                <li class="nav-item p-4">
-                    <a class="text-dark font-weight-bold" href="lugaresTuristicos.html">Lugares turísticos</a></li>
-                <li class="nav-item p-4">
-                    <a class="text-dark font-weight-bold" href="guiaCallejera.html">Guía callejera</a></li>
-                <li class="nav-item p-4">
-                    <a class="text-dark font-weight-bold" href="#">Iniciar Sesión</a></li>
-            </ul>
-    </header>
+
+    {% include 'header.html' %}
 
     <div class="d-flex align-items-start">
 
@@ -61,14 +44,14 @@
                                 <!-- Tarjeta 1 -->
 
                                  <div class="card col-2">
-                                    <img src="source/img/Restaurantes/frijoles.jpg" alt="frijoles">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/frijoles.jpg') }}" alt="frijoles">
                                      <div class="card-body text-center">
                                         <h3 class="card-title">Frijoles</h3>
                                     </div>
                                  </div>
                                     <!--Tarjeta 2-->
                                 <div class="card col-2">
-                                    <img src="source/img/Restaurantes/chicharron.jpg" alt="chicharron">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/chicharron.jpg') }}" alt="chicharron">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Chicharrón</h3>
                                     </div>
@@ -76,21 +59,21 @@
                                  
                                 <!--Tarjeta 3-->
                                 <div class="card col-2">
-                                    <img src="source/img/Restaurantes/quesito.jpg" alt="quesito">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/quesito.jpg') }}" alt="quesito">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Quesito</h3>
                                     </div>
                                 </div>
                                 <!--Tarjeta 4-->
                                 <div class="card col-2"> 
-                                    <img src="source/img/Restaurantes/bocadillo.webp" alt="bocadillo">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/bocadillo.webp') }}" alt="bocadillo">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Bocadillo</h3>
                                     </div>
                                 </div>
                                 <!--Tarjeta 5-->
                                 <div class="card col-2">
-                                    <img src="source/img/Restaurantes/panela.jpg" alt="panela">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/panela.jpg') }}" alt="panela">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Panela</h3>
                                     </div>
@@ -100,35 +83,35 @@
                              <div class="d-flex justify-content-center gap-3">
                                 <!--Tarjeta 6-->
                                 <div class="card col-2">
-                                    <img src="source/img/Restaurantes/arepa.jpg" alt="arepa">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/arepa.jpg') }}" alt="arepa">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Arepas</h3>
                                     </div>
                                 </div>
                                 <!--Tarjeta 7-->
                                 <div class="card col-2">
-                                    <img src="source/img/Restaurantes/mazamorra.jpg" alt="mazamorra">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/mazamorra.jpg') }}" alt="mazamorra">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Mazamorra</h3>
                                     </div>
                                 </div>
                                 <!--Tarjeta 8-->
                                 <div class="card col-2">
-                                    <img src="source/img/Restaurantes/empanadas.jpg" alt="empanadas">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/empanadas.jpg') }}" alt="empanadas">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Empanadas</h3>
                                     </div>
                                 </div>
                                  <!--Tarjeta 9-->
                                  <div class="card col-2">
-                                    <img src="source/img/Restaurantes/bunuelos.jpg" alt="bunuelos">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/bunuelos.jpg') }}" alt="bunuelos">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Buñuelos</h3>
                                     </div>
                                 </div>
                                 <!--Tarjeta 10-->
                                 <div class="card col-2">
-                                    <img src="source/img/Restaurantes/Patacones-con-hogao.jpg" alt="patacones">
+                                    <img src="{{ url_for('static', filename='source/img/Restaurantes/Patacones-con-hogao.jpg') }}" alt="patacones">
                                     <div class="card-body text-center">
                                         <h3 class="card-title">Patacón</h3>
                                     </div>
@@ -154,11 +137,11 @@
                             <br>Es el lugar perfecto para celebrar ocasiones especiales y eventos privados.
                             Ven y vive una experiencia gastronómica que despierta los sentidos.
                         </p>
-                            <img src="source/img/Restaurantes/gabo-mde.png" alt="gabo">
+                            <img src="{{ url_for('static', filename='source/img/Restaurantes/gabo-mde.png') }}" alt="gabo">
                         <h4>Herbario</h4>
                         <p>La columna vertebral de este resrtaurante son las hierbas y especias que se incorporan a ingredientes y cocciones colombianas, cuidando siempre la estética y el respeto por el producto.
                             Además sus platos contienen algunas recetas y sabores de otras partes del mundo para darle variedad a su cocina.</p>
-                            <img src="source/img/Restaurantes/herbario.jpeg" alt="herbario">
+                            <img src="{{ url_for('static', filename='source/img/Restaurantes/herbario.jpeg') }}" alt="herbario">
                     </div>
                     <div class="text-start">
                         <h3>Laureles</h3>
@@ -170,11 +153,11 @@
                          El arrebato de tener un lugar que saca a los comensales del asfalto de la ciudad nos inspira para transportar a nuestros visitantes a una selva  tropical, un lugar inolvidable y refinado con un servicio impecable.
                          <br>El enigmático embrujo, hace que la gastronomía de Malanga sea única, llevando a cada persona en un viaje misterioso y sorprendente, donde experimenten una obra de arte realizada con propuestas de autor; acompañado de una coctelera exótica, tropical elaborada artesanalmente
                         </p>
-                        <img src="source/img/Restaurantes/malanga.jpg" alt="malanga">
+                        <img src="{{ url_for('static', filename='source/img/Restaurantes/malanga.jpg') }}" alt="malanga">
                         <h4>Lavocaderia</h4>
                         <p>Para aquellos amantes de los aguacates, Lavocaderia es un lugar que no se pueden perder. Este restaurante se especializa en platos que tienen como ingrediente principal el aguacate, y ofrece una variedad de opciones deliciosas y saludables.
                         <br>Desde sandwiches y hamburguesas hasta bowls, este hermoso restaurante ofrece una experiencia gastronómica única que no se puede encontrar en ningún otro lugar. Lavocaderia tiene varias sucursales en Medellín, incluyendo una en Laureles en la Cra 66B #34 - 86 Rooftop Sexto Piso Mythical Hotel Boutique, al lado de Unicentro y al frente de la UPB.</p>
-                        <img src="source/img/Restaurantes/lavocaderia.webp" alt="lavocaderia">
+                        <img src="{{ url_for('static', filename='source/img/Restaurantes/lavocaderia.webp') }}" alt="lavocaderia">
                     </div>
                     <div class="text-start">
                         <h3>Envigado</h3>
@@ -186,12 +169,12 @@
                             Conocido por su famoso chicharrón de 100 patas, La Gloria de Gloria es el lugar para disfrutar de auténtica comida paisa. Además del chicharrón, puedes encontrar una amplia variedad de platos tradicionales con una gran sazón hogareña.
                             Se encuentra ubicado Calle 37 Sur #35-06. Los precios de los platos fuertes cuestan entre 10.000 COP y 70.000 COP.
                         </p>
-                        <img src="source/img/Restaurantes/la-gloria-de-gloria.jpg" alt="la gloria de gloria">
+                        <img src="{{ url_for('static', filename='source/img/Restaurantes/la-gloria-de-gloria.jpg') }}" alt="la gloria de gloria">
                         <h4>Tiki Bar</h4>
                         <p>Este es un plan ideal para toda la familia. El Tiki Bar ofrece diferentes ambientes y actividades para los niños, incluyendo una granja y una espectacular vista de la ciudad. La especialidad de su menú son las carnes a la parrilla.
                             Este restaurante bar se inspirta en la cultura polineasia. Este restaurante se encuentra ubicado en la Loma del Escobero sector Hacienda La María.  
                         </p>
-                        <img src="source/img/Restaurantes/tiki-bar.webp" alt="Tiki bar">
+                        <img src="{{ url_for('static', filename='source/img/Restaurantes/tiki-bar.webp') }}" alt="Tiki bar">
                     </div>
                 </div>
             </div>

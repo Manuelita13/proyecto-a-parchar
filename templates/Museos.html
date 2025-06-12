@@ -9,41 +9,29 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+Zl5pD5y5z5+5p5z5z5z5z5z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/Museos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Museos.css') }}">
 
 </head>
 
 <body>
-    <header>
-        <!--Logo-->
-        <img src="" alt="">
-        <!--Menu desplegale-->
-        <ul class="nav justify-content-center">
-            <li class="nav-item-active p-4"><a class="text-dark font-weight-bold" href="index.html">Inicio</a></li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="Restaurantes.html">Restaurantes</a>
-            </li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="Museos.html">Museos</a></li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="lugaresTuristicos.html">Lugares
-                    turísticos</a></li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="guiaCallejera.html">Guía callejera</a>
-            </li>
-            <li class="nav-item p-4"><a class="text-dark font-weight-bold" href="#">Iniciar Sesión</a></li>
-        </ul>
+    
+    {% include 'header.html' %}
 
-        <!--Banner inicial-->
-        <div class="banner w-full">
-            <video src="source/videos/museos-video.mp4" autoplay loop muted playsinline></video>
-            <div class="banner-text color-white">
-                <h1 class="pb-3">¡Vamonos pa' Medellín!: Descubre el encanto de esta mágica ciudad</h1>
-                <h2>La ciudad de la eterna primavera</h2>
-            </div>
+
+    <!--Banner inicial-->
+    <div class="banner w-full">
+        <video src="{{ url_for('static', filename='source/videos/museos-video.mp4') }}" autoplay loop muted playsinline></video>
+        <div class="banner-text color-white">
+            <h1 class="pb-3">¡Vamonos pa' Medellín!: Descubre el encanto de esta mágica ciudad</h1>
+            <h2>La ciudad de la eterna primavera</h2>
         </div>
-    </header>
+    </div>
+        
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/Museo-de-antioquia.jpg" alt="Museo de Antioquia" id="imgMuseoAnti">
+                    <img src="{{ url_for('static', filename='source/img/Museos/Museo-de-antioquia.jpg') }}" alt="Museo de Antioquia" id="imgMuseoAnti">
                     <h2>Museo de Antioquia</h2>
                     <p id="descMuseoAnti">El Museo de Antioquia, ubicado estratégicamente frente a la vibrante Plaza
                         Botero en el corazón de Medellín, es una institución cultural fundamental y el segundo museo más
@@ -59,7 +47,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/museo casa de la memoria.jpg" alt="Museo Casa de la Memoria"
+                    <img src="{{ url_for('static', filename='source/img/Museos/museo casa de la memoria.jpg') }}" alt="Museo Casa de la Memoria"
                         id="imgMuseCaMemo">
                     <h2>Museo Casa de la Memoria</h2>
                     <p id="descMuseoCaMemo">El Museo Casa de la Memoria en Medellín es un espacio conmovedor dedicado a
@@ -75,7 +63,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/museo de arte moderno medellin.jpg" alt="MAMM" id="imgMAMM">
+                    <img src="{{ url_for('static', filename='source/img/Museos/museo de arte moderno medellin.jpg') }}" alt="MAMM" id="imgMAMM">
                     <h2>MAMM</h2>
                     <p id="descMAMM">El Museo de Arte Moderno de Medellín (MAMM) es un epicentro cultural y
                         arquitectónico ubicado en el vibrante barrio de Ciudad del Río. Más que un espacio de
@@ -90,7 +78,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/Museo el castillo.jpg" alt="Imagen del Museo el Castillo"
+                    <img src="{{ url_for('static', filename='source/img/Museos/Museo el castillo.jpg') }}" alt="Imagen del Museo el Castillo"
                         id="imgMuseoCasti">
                     <h2>Museo el Castillo</h2>
                     <p id="descMuseoCasti">El Museo El Castillo en Medellín es un majestuoso palacio gótico medieval que
@@ -106,7 +94,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/Museo-gardeliano.jpg" alt="Imagen del museo Gardeliano" id="imgTeatro">
+                    <img src="{{ url_for('static', filename='source/img/Museos/Museo-gardeliano.jpg') }}" alt="Imagen del museo Gardeliano" id="imgTeatro">
                     <h2>Casa Museo Gardeliana</h2>
                     <p id="descGardeliano">El Museo Casa Gardeliana en Medellín es un emotivo homenaje al legendario
                         Carlos
@@ -122,7 +110,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/museo-del-agua.jpg" alt="Imagen de Museo del agua" id="imgMusa">
+                    <img src="{{ url_for('static', filename='source/img/Museos/museo-del-agua.jpg') }}" alt="Imagen de Museo del agua" id="imgMusa">
                     <h2>Museo del Agua</h2>
                     <p id="descMusa">El Museo del Agua EPM en Medellín es un espacio educativo y fascinante dedicado a
                         la vital importancia del agua. Ubicado en el corazón de la ciudad, este museo interactivo invita
@@ -136,7 +124,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/cementerio-san-pedro-meedellin.jpg"
+                    <img src="{{ url_for('static', filename='source/img/Museos/cementerio-san-pedro-medellin.jpg') }}"
                         alt="Imagen del Cementario Museo San Pedro" id="imgCemenSanPedro">
                     <h2>Cementario Museo de San Pedro</h2>
                     <p id="descCemenSanPedro">El Museo Cementerio San Pedro no es solo un camposanto, sino un verdadero
@@ -152,7 +140,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/palacio-de-la-cultura.webp" alt="Imagen del Palacio de la Cultura"
+                    <img src="{{ url_for('static', filename='source/img/Museos/palacio-de-la-cultura.webp') }}" alt="Imagen del Palacio de la Cultura"
                         id="imgPalacio">
                     <h2>Palacio de la Cultura</h2>
                     <p id="descPalacio">El Palacio de la Cultura Rafael Uribe Uribe, una joya arquitectónica de estilo
@@ -168,7 +156,7 @@
 
             <div class="col-md-4 col-lg-4 col-xl-4 col-sm-12">
                 <div class="seccion-lugar">
-                    <img src="/source/img/Museos/museo-udea.jpg"
+                    <img src="{{ url_for('static', filename='source/img/Museos/museo-udea.jpg') }}"
                         alt="Imagen del Museo de la Universidad" id="imgMuseoA">
                     <h2>Museo Universitario Universidad de Antioquia</h2>
                     <p id="descMuseoA">El Museo Universitario de la Universidad de Antioquia (MUUA) es un vasto

@@ -404,50 +404,8 @@
             });
         </script>
 
-        <footer class="bg-light py-4">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-12">
-                <img src="{{ url_for('static', filename='source/img/a parchar_page-0001.jpg') }}" alt="Logo de A Parchar" class="img-fluid mb-2" style="max-height: 50px;">
-                <h3 class="h5 mb-0">¡No te quedes sin tu parche!</h3>
-            </div>
-
-            <div class="col-12">
-                <nav>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-dark">Inicio</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark">Museos</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark">Parques</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark">Eventos</a></li>
-                        <li><a href="#" class="text-decoration-none text-dark">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-
-            <div class="col-12">
-                <h3 class="h5 mb-2">Contáctanos</h3>
-                <p class="mb-1">Teléfono: 123456789</p>
-                <p class="mb-1">Email: info@aparchar.com</p>
-                <p class="mb-1">Dirección: Calle 123 #45-67, Medellín, Colombia</p>
-                <p class="mb-0">Redes sociales:
-                    <a href="#" class="text-decoration-none text-dark">Facebook</a>,
-                    <a href="#" class="text-decoration-none text-dark">Instagram</a>,
-                    <a href="#" class="text-decoration-none text-dark">Twitter</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="row mt-3">
-            <div class="col-12 text-center text-muted">
-                <p class="mb-0">© 2025 A Parchar Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </div>
-</footer>
-    </body>
-
-</html>
+    {% include 'footer.html' %}
+        
 </body>
 
 </html>

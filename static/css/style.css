@@ -8,7 +8,42 @@ body{
     background-color: rgb(241, 234, 223);
 }
 
-ul{
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* gap: 20px; */
+    width: 100%;
+}
+
+footer h3.mb-3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+footer nav {
+    /* align-items: center; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 20px; */
+}
+
+footer nav ul {
+    list-style: none;
+    /* align-items: center; */
+    font-size: 1.3rem;
+}
+
+footer nav ul li {
+    align-items: center;
+    text-align: center;
+}
+
+footer nav ul li a{
+    color: black;
+}
+
+header, footer {
     background-color: #FF910B;
 }
 
@@ -94,4 +129,8 @@ ul{
             color: #d56d22;
         }
     }
+}
+
+div.container {
+    display: flex;
 }

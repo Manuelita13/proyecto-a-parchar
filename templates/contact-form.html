@@ -10,15 +10,15 @@
 <body>
 
     <h1>Contact Form</h1>
-    <form action="" class="contact-form">
-    {{form.hidden_tag()}}
-    {{ form.name.label(class="form-label") }}
-    {{ form.name(class="form-control") }}
-    {{ form.email.label(class="form-label") }}
-    {{ form.email(class="form-control") }}
-    {{ form.message.label(class="form-label") }}
-    {{ form.message(class="form-control") }}
-    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+    <form method="POST" action="" class="contact-form">
+        {{form.hidden_tag()}}
+        {{ form.name.label(class="form-label") }}
+        {{ form.name(class="form-control") }}
+        {{ form.email.label(class="form-label") }}
+        {{ form.email(class="form-control") }}
+        {{ form.message.label(class="form-label") }}
+        {{ form.message(class="form-control") }}
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
     </form>
 </body>
 </html>

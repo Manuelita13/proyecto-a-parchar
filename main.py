@@ -33,6 +33,8 @@ def museos():
 def restaurantes():
     return render_template('Restaurantes.html')
 
+
+#Formulario de contacto
 app.config['SECRET_KEY'] = 'gV4OyBbczY8dzMEIe1aRocr4vUvlF3gD28ku1oTDs7vriFPEsZfgbPPAKB2r02q8'
 
 @app.route('/contact-form', methods = ['GET', 'POST'])
@@ -41,8 +43,12 @@ def contact_form():
     if form.validate_on_submit():
         with open('contact_form_data.csv', 'a', newline='') as f: 
             writer = csv.writer(f)
-            writer.writerow([form.name.data, form.email.data, form.message.data])
-    # Redirect after submit to index.html that is located in the outside folder out of the contact-form folder on templates folder
+            writer.writerow([
+                f' Nombre: {form.name.data}',
+                f' Correo electrónico: {form.email.data}',
+                f' Mensaje: {form.message.data}'
+            ])
+        return redirect(url_for('index')) 
     return render_template('contact-form.html', form=form)
 
 if __name__ == '__main__':

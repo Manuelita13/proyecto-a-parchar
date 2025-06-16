@@ -180,124 +180,177 @@
             </div>
 
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
-                <div class="container restaurantes">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Lo más típico de nuestra tierra</h2>
+                    <div class="container restaurantes">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>Lo más típico de nuestra tierra</h2>
 
-                            <!--Card 1-->
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-4 overflow-hidden p-0">
-                                        <img src="{{ url_for('static', filename='source/img/popular/graffiti tour.jpg') }}" 
-                                        class="img-fluid w-100  h-100 object-fit-cover left" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Frutas regionales</h5>
-                                            <p class="card-text">Si te piensas quedar una semana en Medellín y aun no has armado plan, no te compliques, acá te dejamos una guía completa pa' que no te estreses</p>
-                                            <p class="card-text">
-                                                <small class="text-body-secondary">
-                                                    <a href="#">pillá la guía pa' que parchés sabroso toda la semana en la city!</a>
-                                                </small>
-                                            </p>
+                                <!--Card 1-->
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 overflow-hidden p-0">
+                                            <img src="{{ url_for('static', filename='source/img/Restaurantes/frutas-regionales.jpg') }}" 
+                                            class="img-fluid w-100  h-100 object-fit-cover left" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Frutas regionales</h5>
+                                                <p class="card-text">Colombia es uno de los paises con mayor diversidad en el mundo. Es también una tierra apta y fecunda para el cultivo de frutas exóticas, las cuales alegran el paladar de quienes tienen la oportunidad de consumirlas.
+                                                    Adornan con sus colores, los mercados locales de este paraíso tropical. </p>
+                                                <p class="card-text">
+                                                    <small class="text-body-secondary">
+                                                        Sapote, granadilla, mamoncillo, ganabana, carambolo, guama y mucho más!
+                                                        <br>No te pierdas de estos sabores únicos que solo encontrarás aquí.
+                                                    </small>
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--Card 2-->
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Postres</h5>
-                                            <p class="card-text">Esta guía es para que puedas apreciar y disfrutar de Medellín y sus plansitos en la noche. Conoce donde puedes salir a comer, bailar, entretenerte y disfrutar de la vida nocturna que Medellín tiene para ofrecerte.</p>
-                                            <p class="card-text">
-                                                <small class="text-body-secondary">
-                                                    <a href="#">Enterate dónde es la rumba, la buena comida y el desorden sabroso esta noche.</a>
-                                                </small>
-                                            </p>
+                                <!--Card 2-->
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Postres</h5>
+                                                <p class="card-text">Los postres colombianos reflejan la diversidad y tradición de nuestra cultura. 
+                                                        No te pierdas de los sabores de nuestro país.
+                                                </p>
+                                                <p class="card-text">
+                                                    <small class="text-body-secondary">
+                                                        Desde la natilla hasta el platano calado. ¡Ven y disfruta de nuestra herencia!
+                                                    </small>
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 overflow-hidden p-0">
-                                        <img src="{{ url_for('static', filename='source/img/noche/Mirador-el-encanto.jpg') }}"
-                                        class="img-fluid w-100  h-100 object-fit-cover right" alt="...">
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Card 3-->
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-4 overflow-hidden p-0">
-                                        <img src="{{ url_for('static', filename='source/img/popular/paragliding-medellin.jpg') }}" 
-                                        class="img-fluid w-100  h-100 object-fit-cover left" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Salado</h5>
-                                            <p class="card-text">Un paseíto brutal por Medallo, lleno de puro ambiente, buena vibra y parches bacanos que te van a sacar más de una sonrisa.</p>
-                                            <p class="card-text">
-                                                <small class="text-body-secondary">
-                                                    <a href="#">viví la experiencia como es... a lo bien.</a>
-                                                </small>
-                                            </p> 
+                                        <div class="col-md-4 overflow-hidden p-0">
+                                            <img src="{{ url_for('static', filename='source/img/Restaurantes/postres.jpg') }}"
+                                            class="img-fluid w-100  h-100 object-fit-cover right" alt="...">
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--Card 4-->
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Picante</h5>
-                                            <p class="card-text">Aquí la cultura florece en cada rincón, uniendo tradiciones, innovación y diversidad. Explora Medellín y descubre cómo cada expresión cultural te invita a ser parte de su historia y de una nueva aventura</p>
-                                            <p class="card-text">
-                                                <small class="text-body-secondary">
-                                                    <a href="#">Descubrí el alma de Medallo en cada paso.</a>
-                                                </small>
-                                            </p>
+                                <!--Card 3-->
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 overflow-hidden p-0">
+                                            <img src="{{ url_for('static', filename='source/img/Restaurantes/salado.jpg') }}" 
+                                            class="img-fluid w-100  h-100 object-fit-cover left" alt="...">
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 overflow-hidden p-0">
-                                        <img src="{{ url_for('static', filename='source/img/Lugares turisticos/Parque-Arvi-4.jpg') }}" 
-                                        class="img-fluid w-100  h-100 object-fit-cover right" alt="...">
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Salado</h5>
+                                                <p class="card-text">Esta región llamada: “El fogón paisa” ubicada entre montañas,
+                                                    se caracteriza por ser uno de los más importantes referentes en la gastronomía colombiana.La esencia gastronómica de Antioquia
+                                                    se debe al legado de diferentes culturas que atravesaron por el territorio hace cientos de años atrás.
+                                                </p>
+                                                <p class="card-text">
+                                                    <small class="text-body-secondary">
+                                                    ¡No te pierdas platos típicos!
+                                                    </small>
+                                                </p> 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--Card 5-->
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Mecato</h5>
-                                            <p class="card-text">Aquí la cultura florece en cada rincón, uniendo tradiciones, innovación y diversidad. Explora Medellín y descubre cómo cada expresión cultural te invita a ser parte de su historia y de una nueva aventura</p>
-                                            <p class="card-text">
-                                                <small class="text-body-secondary">
-                                                    <a href="#">Descubrí el alma de Medallo en cada paso.</a>
-                                                </small>
-                                            </p>
+                                <!--Card 4-->
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Picante</h5>
+                                                <p class="card-text">No hay nada más colombiano que unas empanadas con ají. Si eres amante de lo picante 
+                                                    y quieres disfrutar de un plato típico de la región, no te puedes perder de las empanadas con ají. 
+                                                    Este plato es una delicia que combina la masa crujiente de la empanada con el sabor picante del ají, creando una explosión de sabores en tu boca.</p>
+                                                </p>
+                                                <p class="card-text">
+                                                    <small class="text-body-secondary">
+                                                    ¡Disfruta de nuestra comida callejera!
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 overflow-hidden p-0">
+                                            <img src="{{ url_for('static', filename='source/img/Restaurantes/aji-y-empanada.jpg') }}" 
+                                            class="img-fluid w-100  h-100 object-fit-cover right" alt="...">
                                         </div>
                                     </div>
-                                    <div class="col-md-4 overflow-hidden p-0">
-                                        <img src="{{ url_for('static', filename='source/img/Restaurantes/arepa.jpg') }}" 
-                                        class="img-fluid w-100  h-100 object-fit-cover right" alt="...">
+                                </div>
+                                <!--Card 5-->
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 overflow-hidden p-0">
+                                            <img src="{{ url_for('static', filename='source/img/Restaurantes/mecato.jpg') }}" 
+                                            class="img-fluid w-100  h-100 object-fit-cover left" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Mecato</h5>
+                                                <p class="card-text">El mecato es un alimento ligero; puede ser galletas, dulces o papas fritas.
+                                                    Este acompaña a las familias colombianas en todos los momentos importantes.
+                                                    ¡Disfruta de nuestros refrigerios llenos de tradición y cultura colombiana y, sobre todo, mucho sabor!</p>
+                                                <p class="card-text">
+                                                    <small class="text-body-secondary">
+                                                    ¡Mecatea como todo un colombiano!
+                                                    </small>
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
 
             <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
-                <div class="centrado">
-                    <h2>Los mejores restaurante de Medellín</h2>
-                </div>
-                <h2> tipo de blog Carmen</h2>
-                <h2>La Matriarca</h2>
-                <h2>Mamasita</h2>
-                <h2>Mondongo's</h2>  
+                    <div class="text-center">
+                        <h2>Los mejores restaurante de Medellín</h2>
+                        <p>
+                            Medellín es uno de los destinos más atractivos para los turistas gracias a sus cultura y tradición y gastronomia,
+                            la cual es uno de los epicentros de la gastronomía nacional.
+                            En esta vibrante ciudad ofrece una oferta gastronómica; desde comida típica antioqueña, hasta cocina internacional.
+                            <br>A continuación tenemos una lista de los 4 lugares que no te puedes perder en tu paso por Medellín.
+                        </p>
+                    </div>
+
+                    <div class="text-start">
+                        <h2>Carmen</h2>
+                        <p>En una hermosa casa íntima, cálida y elegante en el barrio El Poblado de Medellín, Carmen ofrece comida contemporánea inspirada en la biodiversidad de Colombia.
+                        La riqueza cultural y biológica de nuestras regiones se explora dentro de una propuesta gastronómica que busca celebrar la sabrosura y diversidad de nuestras tradiciones culinarias.
+                        Se encuentra ubicado en la Cra 36 # 10 A - 27.</p>
+                        <img src="{{ url_for('static', filename='source/img/Restaurantes/carmen.jpg') }}" alt="carmen" class="img-custom">
+                    </div>
+                    
+                    <div class="text-start">
+                        <h2>La Matriarca</h2>
+                        <p>La Matriarca no solo ofrece una experiencia gastronómica, sino también un ambiente acogedor,
+                        que se llena con la magia de la música en vivo, que la encuentras en la mayoría de nuestras sedes de jueves a sábado.
+                        Aquí, puedes encontrar desde sabores locales como el chicharrón, cocina de autor, jugosos cortes de carne y coctelería de autor.
+                        Se encuentra ubicado en la calle 8 # 43b – 62. Barrio Astorga, Poblado, Medellín, Colombia.
+                    </p>
+                    <img src="{{ url_for('static', filename='source/img/Restaurantes/la-matriarca.jpg') }}" alt="la matriarca" class="img-custom">
+                    </div>
+
+                    <div class="text-start">
+                        <h2>Mamasita</h2>
+                        <p>
+                            Mamasita es un restaurante que encarna la esencia misma de la auténtica cocina colombiana.
+                            Contribuimos a la esencia del lugar, representando en diseño y color la riqueza cultural que define a Medellín.
+                            Se encuentra ubicado en la carrera 43D# 10-77.
+                        </p>
+                        <img src="{{ url_for('static', filename='source/img/Restaurantes/mamasita-medallo.jpg') }}" alt="mamasita" class="img-custom">
+                    </div>
+
+                    <div class="text-start">
+                        <h2>Mondongo's</h2>
+                        <p>
+                            Mondongo’s es un restaurante reconocido a nivel nacional e internacional, en donde la preparación de los deliciosos platos tradicionales 
+                            de la comida colombiana conjugan con el servicio y la atención de alta calidad que lo destaca entre la amplia oferta gastronómica
+                            que se ofrece en la actualidad. Su sede de Laureles se encuentra en la larrera 70 No . C3 - 43.
+                        </p>
+                        <img src="{{ url_for('static', filename='source/img/Restaurantes/mondogo_s.jpg') }}" alt="Mondongo’s" class="img-custom">
+                    </div>
+                    
             </div>
         </div>
     </div>

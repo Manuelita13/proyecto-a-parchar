@@ -1,49 +1,137 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(241, 234, 223);
 }
 
 footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
     /* gap: 20px; */
     width: 100%;
+    background-color: #FF910B;
+    padding: 40px 0;
+    margin-top: 50px;
+    flex-direction: column;
 }
 
-footer h3.mb-3 {
-    font-size: 1.8rem;
-    font-weight: bold;
+header,
+footer {
+    background-color: #FF910B;
+    width: 100%;
 }
 
-footer nav {
-    /* align-items: center; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* gap: 20px; */
+
+
+.pie-pagina .grupo1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 45px 0px;
 }
 
-footer nav ul {
-    list-style: none;
-    /* align-items: center; */
-    font-size: 1.3rem;
-}
-
-footer nav ul li {
+.pie-pagina .grupo1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.pie-pagina .grupo1 .box figure img {
+    width: 250px;
+
+}
+
+.pie-pagina .grupo1 .box h2 {
+    color: #f7f4f4;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.pie-pagina .grupo1 .box ul{
+    list-style: none;
+    color: white;
+}
+
+.pie-pagina .grupo1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo1 .redes-sociales a {
+
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
     text-align: center;
+    border-radius: 50%;
+
+    transition: all 300ms ease;
 }
 
-footer nav ul li a{
-    color: black;
+.pie-pagina .grupo1 .redes-sociales a:hover {
+
+    color: rgb(231, 100, 13);
+    background-color: rgba(240, 142, 23, 0.766);
 }
 
-header, footer {
+.pie-pagina .grupo2 {
+    background-color: #f1bb07;
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.pie-pagina .grupo2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    .pie-pagina .grupo1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+
+    }
+
+    .pie-pagina .grupo1 .box figure {
+        margin-bottom: 20px;
+    }
+
+    .pie-pagina .grupo1 .box figure img {
+        width: 200px;
+    }
+
+    .pie-pagina .grupo1 .box h2,
+    .pie-pagina .grupo1 .box p {
+        text-align: center;
+
+
+    }
+
+    .pie-pagina .grupo1 .redes-sociales {
+        justify-content: center;
+
+    }
+}
+
+header,
+footer {
     background-color: #FF910B;
 }
 
@@ -55,7 +143,8 @@ header, footer {
 
 .banner video {
     position: absolute;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100%;
     object-fit: cover;
@@ -75,56 +164,60 @@ header, footer {
     border-radius: 16px;
 
 }
-.card{
+
+.card {
     border-radius: 12px;
 }
-.card .card-body{
+
+.card .card-body {
     height: 300px;
 }
-.img-fluid{
+
+.img-fluid {
     width: 100%;
     height: 250px;
 }
 
-.guia-callejera{
+.guia-callejera {
 
-    h2{
+    h2 {
         font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
         margin: 40px 0;
     }
 
-    .card-body{
+    .card-body {
         padding: 5%;
     }
 
-    .img-fluid.left{
+    .img-fluid.left {
         border-radius: 18px 0px 0 18px
     }
-    .img-fluid.right{
+
+    .img-fluid.right {
         border-radius: 0 18px 18px 0;
     }
 
-    .card-title{
+    .card-title {
         font-size: 1.8rem;
         font-weight: bold;
         color: #FF910B;
     }
 
-    .card-text{
+    .card-text {
         font-size: 1.2rem;
         color: #333;
         padding: 15px 0;
     }
 
-    .text-body-secondary a{
+    .text-body-secondary a {
         color: #a84d0b;
         font-weight: bold;
         font-size: 1.1rem;
         text-decoration: none;
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
             color: #d56d22;
         }
@@ -133,4 +226,21 @@ header, footer {
 
 div.container {
     display: flex;
+}
+.container.mb-3 {
+    display: flex;         
+    flex-direction: column; 
+    align-items: center;    
+    
+}
+
+.container.mb-3 video {
+    max-width: 100%; 
+    height: auto;    
+    margin-bottom: 20px; 
+}
+
+
+.container.mb-3 h3 {
+    text-align: center;
 }
